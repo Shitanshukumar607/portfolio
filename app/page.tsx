@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
 import HeroText, { HeroTextHandle } from "@/components/HeroText";
+import ProjectCards from "@/components/ProjectCards";
+import gsap from "gsap";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export default function Page() {
   const heroRef = useRef<HeroTextHandle>(null);
@@ -17,7 +18,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex flex-col px-6 gap-8 py-10">
+    <main className="flex flex-col px-6 gap-8 py-25">
       <HeroText ref={heroRef} />
       <Image
         src="/hero.webp"
@@ -26,6 +27,7 @@ export default function Page() {
         alt="Me at computer"
         className="w-full h-full rounded-xl"
       />
+      <ProjectCards />
     </main>
   );
 }

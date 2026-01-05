@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-mono: var(--font-jetbrains-mono);
+  --font: var(--font-jetbrains-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +18,17 @@
   }
 }
 
+html {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-mono);
+  font-family: var(--font);
   transition: all 0.2s ease-in;
 }
 

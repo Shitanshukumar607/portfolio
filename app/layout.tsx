@@ -4,6 +4,7 @@ import "./globals.css";
 
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/Navbar";
 
 const shadownHand = localFont({
   src: "./fonts/ShadowHand.ttf",
@@ -28,9 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jetBrainsMono.variable} ${shadownHand.variable} max-w-3xl`}
+        className={`${jetBrainsMono.variable} ${shadownHand.variable} w-3xl`}
       >
-        <ThemeProvider attribute="class">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

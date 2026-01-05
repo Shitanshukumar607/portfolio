@@ -1,5 +1,3 @@
-"use client";
-
 import { ProjectType } from "@/types/types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -41,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   }, []);
 
   return (
-    <div>
+    <div className="mb-28">
       <Image
         ref={imgRef}
         src={project.image}

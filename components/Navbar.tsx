@@ -15,7 +15,7 @@ export default function Navbar() {
   const path = usePathname();
 
   return (
-    <header className="fixed w-3xl top-0 px-6 bg-background z-100">
+    <header className="fixed w-3xl top-0  bg-background z-100">
       <nav
         aria-label="Main navigation"
         className="relative mx-auto flex items-center justify-between py-4"

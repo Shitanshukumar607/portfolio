@@ -1,5 +1,9 @@
 "use client";
 
+import ThemeToggle from "@/components/theme-toggle";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const navigationLinks = [
   { name: "About", link: "/about" },
   { name: "Now", link: "/now" },
@@ -7,10 +11,9 @@ const navigationLinks = [
   { name: "GitHub", link: "https://github.com/ShitanshuKumar607" },
 ];
 
-import ThemeToggle from "@/components/theme-toggle";
-import Link from "next/link";
-
 export default function Navbar() {
+  const path = usePathname();
+
   return (
     <header className="navbar px-6">
       <nav
@@ -27,7 +30,12 @@ export default function Navbar() {
         <ul className="flex items-center gap-2 sm:gap-5">
           {navigationLinks.map((link) => (
             <li key={link.link} className="hidden sm:block">
-              <Link href={link.link} className="link z-50 text-lg">
+              <Link
+                href={link.link}
+                className={`link z-50 text-lg ${
+                  path == link.name ? "link-active" : ""
+                }`}
+              >
                 {link.name}
               </Link>
             </li>

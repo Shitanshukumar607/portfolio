@@ -5,17 +5,14 @@
   --foreground: #131212;
 }
 
+.dark {
+  --background: #121212;
+  --foreground: #ddd;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font: var(--font-jetbrains-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #ddd;
-  }
 }
 
 html {
@@ -28,10 +25,46 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font);
+  font-family: var(--font-jetbrains-mono), monospace;
   transition: all 0.2s ease-in;
 }
 
 .shadow-hand {
   font-family: var(--font-shadow-hand);
+}
+
+.link {
+  position: relative;
+  display: block;
+  height: 1.125rem;
+  line-height: 1.1rem;
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  content: "";
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.4s;
+}
+
+.link:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+/* Active route (Next.js) */
+.link-active::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
 }

@@ -15,7 +15,9 @@ export default function Navbar() {
   const path = usePathname();
 
   return (
-    <header className="fixed w-3xl top-0  bg-background z-100">
+    <header
+      className="fixed w-3xl top-0 bg-background transition-all duration-200 ease-in z-100"
+    >
       <nav
         aria-label="Main navigation"
         className="relative mx-auto flex items-center justify-between py-4"
@@ -24,7 +26,7 @@ export default function Navbar() {
           href="/"
           className="logo-text nav-logo z-50 select-none px-1 text-4xl font-semibold sm:px-0 shadow-hand"
         >
-          Name
+          Shitanshu
         </Link>
 
         <ul className="flex items-center gap-2 sm:gap-5">

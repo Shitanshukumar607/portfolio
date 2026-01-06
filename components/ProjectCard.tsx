@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           autoAlpha: 1,
           scrollTrigger: {
             trigger: imgRef.current,
-            start: "top 55%",
+            start: "top 60%",
             end: "top 10%",
             scrub: true,
             toggleActions: "play none none reverse",

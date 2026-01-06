@@ -9,7 +9,7 @@ const navigationLinks = [
 
 const Footer = () => {
   return (
-    <footer className=" rounded-lg -mt-25">
+    <footer className="rounded-lg">
       <div className="pt-4 pb-12 md:py-8 mx-auto w-full">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link

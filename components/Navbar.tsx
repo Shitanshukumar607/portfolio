@@ -33,7 +33,7 @@ export default function Navbar() {
               <Link
                 href={link.link}
                 className={`link z-50 text-lg ${
-                  path == link.name ? "link-active" : ""
+                  path == link.link ? "link-active" : ""
                 }`}
               >
                 {link.name}

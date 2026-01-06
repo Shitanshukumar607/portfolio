@@ -18,7 +18,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className="flex flex-col  gap-8 py-25">
+    <main className="flex flex-col gap-8 mt-25">
       <HeroText ref={heroRef} />
       <Image
         src="/hero.webp"

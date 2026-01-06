@@ -35,6 +35,12 @@ export default function Navbar() {
                 className={`link z-50 text-lg ${
                   path == link.link ? "link-active" : ""
                 }`}
+                target={link.link.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  link.link.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
               >
                 {link.name}
               </Link>

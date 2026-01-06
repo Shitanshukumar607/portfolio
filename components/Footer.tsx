@@ -27,6 +27,12 @@ const Footer = () => {
                 <Link
                   href={link.link}
                   className="mr-4 sm:ml-6 sm:mr-0 hover:underline"
+                  target={link.link.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    link.link.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                 >
                   {link.name}
                 </Link>

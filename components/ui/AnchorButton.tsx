@@ -12,6 +12,8 @@ const AnchorButton = ({ text, href, icon }: AnchorButtonProps) => {
     <Link
       href={href}
       className="group relative inline-flex h-12 gap-2 text-lg items-center justify-center overflow-hidden rounded-md border-2 border-neutral-300 dark:border-gray-700 bg-transparent px-6 font-medium  transition-all [box-shadow:0px_4px_0.5px_#d4d4d4] dark:[box-shadow:0px_4px_0.5px_#374151] hover:translate-y-0.5 hover:shadow-none"
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
     >
       <span className="text-foreground">{text}</span>
 

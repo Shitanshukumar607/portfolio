@@ -1,42 +1,8 @@
 "use client";
 
+import { timelineData } from "@/data/projects";
 import { pageLoadGSAP } from "@/utils/use-gsap";
 import { useEffect, useRef } from "react";
-
-const timelineData = [
-  {
-    date: "Current",
-    title: "Craft Your Portfolio",
-    description:
-      "A Next.js app that parses the resume, maps sections to templates, then uses the GitHub API to create a repo and trigger a GitHub Pages deployment automatically.",
-    stack: "Next.js · Github API · GitHub Pages",
-    url: "https://CraftYourPortfolio.vercel.app",
-  },
-  {
-    date: "2026-01",
-    title: "CP Discord Bot",
-    description:
-      "A Discord.js bot that connects with Codeforces to track ratings, maintain server leaderboards, auto-update user roles on rank changes.",
-    stack: "Node.js · Discord.js · Codeforces API",
-    url: "https://github.com/ShitanshuKumar607/CP-Discord-Bot",
-  },
-  {
-    date: "2025-12",
-    title: "Drawspace",
-    description:
-      "A collaborative whiteboard for real-time drawing. I used Konva.js for the canvas layer and WebSockets to sync strokes, cursors, and history across users with low latency.",
-    stack: "Next.js · Konva.js · WebSockets",
-    url: "https://Drawspace.vercel.app",
-  },
-  {
-    date: "2025-11",
-    title: "AsciiYou",
-    description:
-      "A live webcam-to-ASCII visualizer which captures frames with getUserMedia, sampled pixel blocks, mapped brightness to characters, and rendered the output in a canvas for real-time performance.",
-    stack: "React · getUserMedia · Canvas API",
-    url: "https://asciiYou.vercel.app",
-  },
-];
 
 const Now = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);

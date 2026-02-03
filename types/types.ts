@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ProjectParagraph {
   text: string;
   link?: {
@@ -16,4 +18,17 @@ export interface ProjectType {
   slug: string;
   githubUrl?: string;
   paragraphs?: (string | ProjectParagraph)[];
+}
+
+export interface TimelineItem {
+  date: string;
+  title: string;
+  description: string;
+  stack: string;
+  url: string;
+}
+
+export interface AboutSection {
+  topicName: string;
+  details: string | ReactNode;
 }

@@ -26,7 +26,7 @@ export const projects: ProjectType[] = [
     title: "Drawspace",
     desc: "A collaborative whiteboard app with real-time drawing.",
     stack: "Next.js · Konva.js · WebSockets",
-    image: "/dummy.jpg",
+    image: "/drawspace.png",
     date: "2025-12",
     url: "https://Drawspace.vercel.app",
     slug: "drawspace",

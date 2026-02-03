@@ -24,7 +24,7 @@ const projects: ProjectType[] = [
     title: "AsciiYou",
     desc: "Turns your live webcam feed into real-time ASCII art using pixel sampling and canvas rendering.",
     stack: "React · getUserMedia · Canvas API",
-    image: "/dummy.jpg",
+    image: "/asciiYou.png",
     date: "2025-11",
     url: "https://asciiYou.vercel.app",
     slug: "3",

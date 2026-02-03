@@ -1,35 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
-import { ProjectType } from "@/types/types";
-
-const projects: ProjectType[] = [
-  {
-    title: "Craft Your Portfolio",
-    desc: "Automatically turns your resume into a clean portfolio and deploys it on GitHub Pages.",
-    stack: "Next.js · Github API · GitHub Pages",
-    image: "/craftYourPortfolio.png",
-    date: "2026-01",
-    url: "https://CraftYourPortfolio.vercel.app",
-    slug: "1",
-  },
-  {
-    title: "Drawspace",
-    desc: "A collaborative whiteboard app with real-time drawing.",
-    stack: "Next.js · Konva.js · WebSockets",
-    image: "/dummy.jpg",
-    date: "2025-12",
-    url: "https://Drawspace.vercel.app",
-    slug: "2",
-  },
-  {
-    title: "AsciiYou",
-    desc: "Turns your live webcam feed into real-time ASCII art using pixel sampling and canvas rendering.",
-    stack: "React · getUserMedia · Canvas API",
-    image: "/asciiYou.png",
-    date: "2025-11",
-    url: "https://asciiYou.vercel.app",
-    slug: "3",
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function ProjectCards() {
   return (

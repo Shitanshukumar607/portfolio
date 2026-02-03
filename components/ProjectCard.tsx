@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             scrub: true,
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
     });
 
@@ -68,7 +68,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <AnchorButton text="Visit" href={project.url} icon={<Home />} />
           <AnchorButton
             text="Details"
-            href={`/projects/${project.slug}`}
+            href={`/project/${project.slug}`}
             icon={<ArrowRight />}
           />
         </div>

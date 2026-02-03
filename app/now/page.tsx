@@ -6,28 +6,35 @@ import { useEffect, useRef } from "react";
 const timelineData = [
   {
     date: "Current",
+    title: "Craft Your Portfolio",
     description:
-      "Deepening my understanding of distributed systems, scalability, and database design patterns. Reading 'Designing Data-Intensive Applications' and applying concepts in side projects.",
+      "A Next.js app that parses the resume, maps sections to templates, then uses the GitHub API to create a repo and trigger a GitHub Pages deployment automatically.",
+    stack: "Next.js · Github API · GitHub Pages",
+    url: "https://CraftYourPortfolio.vercel.app",
   },
   {
-    date: "Q4 2025",
+    date: "2026-01",
+    title: "CP Discord Bot",
     description:
-      "Built several complex applications using Next.js, including a real-time collaboration tool and an e-commerce platform with Stripe integration.",
+      "A Discord.js bot that connects with Codeforces to track ratings, maintain server leaderboards, auto-update user roles on rank changes.",
+    stack: "Node.js · Discord.js · Codeforces API",
+    url: "https://github.com/ShitanshuKumar607/CP-Discord-Bot",
   },
   {
-    date: "Mid 2025",
+    date: "2025-12",
+    title: "Drawspace",
     description:
-      "Started contributing to open-source repositories. Fixed bugs and added features to popular React libraries, improving my code reading skills and collaboration ability.",
+      "A collaborative whiteboard for real-time drawing. I used Konva.js for the canvas layer and WebSockets to sync strokes, cursors, and history across users with low latency.",
+    stack: "Next.js · Konva.js · WebSockets",
+    url: "https://Drawspace.vercel.app",
   },
   {
-    date: "Early 2025",
+    date: "2025-11",
+    title: "AsciiYou",
     description:
-      "Transitioned from basic knowledge to advanced concepts like Server Components, Suspense, and advanced hooks. Built a comprehensive portfolio of projects.",
-  },
-  {
-    date: "Late 2024",
-    description:
-      "Started my coding journey. Focused on core web technologies: HTML, CSS, and JavaScript. Built foundational understanding through LeetCode and small projects.",
+      "A live webcam-to-ASCII visualizer which captures frames with getUserMedia, sampled pixel blocks, mapped brightness to characters, and rendered the output in a canvas for real-time performance.",
+    stack: "React · getUserMedia · Canvas API",
+    url: "https://asciiYou.vercel.app",
   },
 ];
 
@@ -48,7 +55,7 @@ const Now = () => {
     <main ref={containerRef} className="my-25">
       <h1 className="text-5xl sm:text-6xl font-extrabold">What's New?</h1>
       <h2 className="text-xl sm:text-2xl mt-2">
-        Updates on life and what I’m working on.
+        Updates on what I’m working on.
       </h2>
 
       <div className="mt-12 flex flex-col ">
@@ -59,8 +66,27 @@ const Now = () => {
                 <time>{item.date}</time>
               </div>
             </div>
-            <div className="pl-6 sm:pl-8 mt-1">
+            <div className="pl-6 sm:pl-8 mt-1 space-y-2">
+              {"title" in item && item.title ? (
+                <div className="text-lg font-semibold">
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      className="underline underline-offset-4"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    item.title
+                  )}
+                </div>
+              ) : null}
               <p className="text-lg text-foreground">{item.description}</p>
+              {"stack" in item && item.stack ? (
+                <p className="text-sm text-muted-foreground">{item.stack}</p>
+              ) : null}
             </div>
           </div>
         ))}

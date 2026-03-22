@@ -2,6 +2,21 @@ import { ProjectType, TimelineItem } from "@/types/types";
 
 export const projects: ProjectType[] = [
   {
+    title: "ScrapeX",
+    desc: "A workflow-based scraping and automation platform with execution tracking and credit management.",
+    stack: "Next.js · Puppeteer · Prisma · Razorpay",
+    image: "/ScrapeX.png",
+    date: "2026-03",
+    url: "https://scrapex.shitanshu.me",
+    slug: "scrapex",
+    paragraphs: [
+      "ScrapeX is a modern workflow-driven scraping and automation platform built to simplify repetitive web tasks.",
+      "It lets users design automation flows, trigger scraping jobs, and monitor each execution phase through a clear dashboard.",
+      "The platform includes detailed logs and run history so users can debug failures quickly and improve workflow reliability.",
+      "Credit-based usage and integrated Razorpay payments make it easy to manage plans and scale usage as needed.",
+    ],
+  },
+  {
     title: "Craft Your Portfolio",
     desc: "Automatically turns your resume into a clean portfolio and deploys it on GitHub Pages.",
     stack: "Next.js · Github API · GitHub Pages",
@@ -9,6 +24,7 @@ export const projects: ProjectType[] = [
     date: "2026-01",
     url: "https://CraftYourPortfolio.vercel.app",
     slug: "craft-your-portfolio",
+    githubUrl: "https://github.com/shitanshukumar607/craftyourportfolio",
     paragraphs: [
       "Craft Your Portfolio is a tool that automatically transforms your resume into a beautifully designed portfolio website.",
       "Simply upload your resume, and the app parses your experience, skills, and projects to generate a personalized portfolio.",
@@ -38,26 +54,34 @@ export const projects: ProjectType[] = [
       "Perfect for remote teams, educators, and creative collaborations.",
     ],
   },
-  {
-    title: "AsciiYou",
-    desc: "Turns your live webcam feed into real-time ASCII art using pixel sampling and canvas rendering.",
-    stack: "React · getUserMedia · Canvas API",
-    image: "/asciiYou.png",
-    date: "2025-11",
-    url: "https://asciiYou.vercel.app",
-    slug: "asciiyou",
-    paragraphs: [
-      "AsciiYou transforms your live webcam feed into mesmerizing ASCII art in real-time.",
-      "Using the getUserMedia API, the app captures your video stream and processes each frame through a custom pixel sampling algorithm.",
-      "The Canvas API is used to render the ASCII characters, mapping brightness values to a carefully selected character set for optimal visual effect.",
-      "Customize the output with different character sets, colors, and resolution settings to create unique ASCII portraits.",
-    ],
-  },
+  // {
+  //   title: "AsciiYou",
+  //   desc: "Turns your live webcam feed into real-time ASCII art using pixel sampling and canvas rendering.",
+  //   stack: "React · getUserMedia · Canvas API",
+  //   image: "/asciiYou.png",
+  //   date: "2025-11",
+  //   url: "https://asciiYou.vercel.app",
+  //   slug: "asciiyou",
+  //   paragraphs: [
+  //     "AsciiYou transforms your live webcam feed into mesmerizing ASCII art in real-time.",
+  //     "Using the getUserMedia API, the app captures your video stream and processes each frame through a custom pixel sampling algorithm.",
+  //     "The Canvas API is used to render the ASCII characters, mapping brightness values to a carefully selected character set for optimal visual effect.",
+  //     "Customize the output with different character sets, colors, and resolution settings to create unique ASCII portraits.",
+  //   ],
+  // },
 ];
 
 export const timelineData: TimelineItem[] = [
   {
     date: "Current",
+    title: "ScrapeX",
+    description:
+      "A modern workflow-based scraping and automation platform. It lets users design automation flows, execute scraping jobs, track logs and execution phases, and manage credits in one dashboard.",
+    stack: "Next.js · Puppeteer · Prisma · Razorpay",
+    url: "https://scrapex.shitanshu.me",
+  },
+  {
+    date: "2026-02",
     title: "Craft Your Portfolio",
     description:
       "A Next.js app that parses the resume, maps sections to templates, then uses the GitHub API to create a repo and trigger a GitHub Pages deployment automatically.",
